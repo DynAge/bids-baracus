@@ -14,6 +14,8 @@ RUN apt-get update && \
 
 RUN npm install -g bids-validator@1.5.4
 
+RUN conda install python=3.6
+
 COPY requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt && \
     rm -rf /root/.cache/pip
