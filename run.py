@@ -28,7 +28,7 @@ from utils.results.zip_intermediate import (
 
 GEAR = "bids-baracus"
 REPO = "dynage"
-CONTAINER = f"{REPO}/{GEAR}]"
+CONTAINER = f"{REPO}/{GEAR}"
 
 # The BIDS App command to run, e.g. "mriqc"
 BIDS_APP = "run_brain_age_bids.py"
