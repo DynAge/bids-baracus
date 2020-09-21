@@ -7,8 +7,7 @@ RUN apt-get update && \
     apt-get install -y \
     zip \
     nodejs \
-    tree \
-    gcc && \
+    tree && \
     rm -rf /var/lib/apt/lists/*
 # The last line above is to help keep the docker image smaller
 
