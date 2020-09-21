@@ -26,18 +26,18 @@ from utils.results.zip_intermediate import (
     zip_intermediate_selected,
 )
 
-GEAR = "bids-app-template"
-REPO = "flywheel-apps"
+GEAR = "bids-baracus"
+REPO = "dynage"
 CONTAINER = f"{REPO}/{GEAR}]"
 
 # The BIDS App command to run, e.g. "mriqc"
-BIDS_APP = "./tests/test.sh"
+BIDS_APP = "run_brain_age_bids.py"
 
 # What level to run at (positional_argument #3)
 ANALYSIS_LEVEL = "participant"  # "group"
 
 # when downloading BIDS Limit download to specific folders? e.g. ['anat','func','fmap']
-DOWNLOAD_MODALITIES = []  # empty list is no limit
+DOWNLOAD_MODALITIES = ['anat']  # empty list is no limit
 
 # Whether or not to include src data (e.g. dicoms) when downloading BIDS
 DOWNLOAD_SOURCE = False
@@ -46,7 +46,6 @@ FREESURFER_LICENSE = "/opt/freesurfer/license.txt"
 
 
 def main(gtk_context):
-
     log = gtk_context.log
 
     # Keep a list of errors and warning to print all in one place at end of log
@@ -200,7 +199,6 @@ def main(gtk_context):
     try:
 
         if ok_to_run:
-
             returncode = 0
 
             # Create output directory
@@ -229,8 +227,8 @@ def main(gtk_context):
         # zip entire output/<analysis_id> folder into
         #  <gear_name>_<project|subject|session label>_<analysis.id>.zip
         zip_file_name = (
-            gtk_context.manifest["name"]
-            + f"_{run_label}_{gtk_context.destination['id']}.zip"
+                gtk_context.manifest["name"]
+                + f"_{run_label}_{gtk_context.destination['id']}.zip"
         )
         zip_output(
             str(gtk_context.output_dir),

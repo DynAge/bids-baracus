@@ -1,13 +1,13 @@
 {
-  "name": "bids-app-template",
-  "label": "<Bids-App-Template>: short human-friendly name/description displayed in interface",
-  "description": "<editme Name> (<version>) longer description.",
-  "version": "0.0.0_0.3.0",
+  "name": "bids-baracus",
+  "label": "BARACUS: Brain-Age Regression Analysis and Computation Utility Software",
+  "description": "BARACUS: Brain-Age Regression Analysis and Computation Utility Software.",
+  "version": "dev0.0.0_v1.1.4",
   "custom": {
-    "docker-image": "flywheel/bids-app-template:0.0.0_0.3.0",
+    "docker-image": "dynage/bids-baracus:dev0.0.0_v1.1.4",
     "gear-builder": {
       "category": "analysis",
-      "image": "flywheel/bids-app-template:0.0.0_0.3.0"
+      "image": "dynage/bids-baracus:dev0.0.0_v1.1.4"
     },
     "flywheel": {
       "suite": "BIDS Apps"
@@ -184,10 +184,10 @@
     "PYTHONUNBUFFERED": "1"
   },
   "command": "python run.py",
-  "author": "Dr. Smartypants, Whatsamatter U",
-  "maintainer": "Flywheel <support@flywheel.io>",
-  "cite": "Dewy, Cheetum, and How; The templatest BIDS app you will ever see; PLOS ONE 12(9):e0184661; doi:10.1371/journal.pone.0184661.",
+  "author": "Franz Liem",
+  "maintainer": "franziskus.liem@uzh.ch",
+  "cite": "Liem et al. (2017). Predicting brain-age from multimodal imaging data captures cognitive impairment. Neuroimage, 148:179–188, doi: 10.1016/j.neuroimage.2016.11.005.",
   "license": "MIT",
-  "source": "https://github.com/flywheel-apps/bids-app-template",
-  "url": "https://github.com/flywheel-apps/bids-app-template"
+  "source": "https://github.com/DynAge/bids-baracus",
+  "url": "https://github.com/BIDS-Apps/baracus"
 }

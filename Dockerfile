@@ -1,6 +1,6 @@
-FROM python:3.8-buster as base
+FROM bids/baracus:v1.1.4
 
-LABEL maintainer="support@flywheel.io"
+LABEL maintainer="franziskus.liem@uzh.ch"
 
 RUN apt-get update && \
     curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
