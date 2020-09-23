@@ -2,12 +2,12 @@
   "name": "bids-baracus",
   "label": "BARACUS: Brain-Age Regression Analysis and Computation Utility Software",
   "description": "BARACUS: Brain-Age Regression Analysis and Computation Utility Software.",
-  "version": "dev0.0.6_v1.1.4",
+  "version": "dev0.0.7_v1.1.4",
   "custom": {
-    "docker-image": "dynage/bids-baracus:dev0.0.6_v1.1.4",
+    "docker-image": "dynage/bids-baracus:dev0.0.7_v1.1.4",
     "gear-builder": {
       "category": "analysis",
-      "image": "dynage/bids-baracus:dev0.0.6_v1.1.4"
+      "image": "dynage/bids-baracus:dev0.0.7_v1.1.4"
     },
     "flywheel": {
       "suite": "BIDS Apps"
@@ -58,27 +58,6 @@
     },
     "participant_label": {
       "description": "[PARTICIPANT_LABEL [PARTICIPANT_LABEL ...]]",
-      "optional": true,
-      "type": "string"
-    },
-    "run-id": {
-      "description": "[RUN_ID [RUN_ID ...]]",
-      "optional": true,
-      "type": "string"
-    },
-    "task-id": {
-      "description": "[TASK_ID [TASK_ID ...]]",
-      "optional": true,
-      "type": "string"
-    },
-    "modalities": {
-      "description": "T1w|bold|T2w",
-      "enum": [
-        "",
-        "T1w",
-        "bold",
-        "T2w"
-      ],
       "optional": true,
       "type": "string"
     },
@@ -158,7 +137,7 @@
   "environment": {
     "PYTHONUNBUFFERED": "1"
   },
-  "command": "/usr/local/anaconda/envs/py37/bin/python run.py",
+  "command": ". activate py37 && python run.py",
   "author": "Franz Liem",
   "maintainer": "franziskus.liem@uzh.ch",
   "cite": "Liem et al. (2017). Predicting brain-age from multimodal imaging data captures cognitive impairment. Neuroimage, 148:179–188, doi: 10.1016/j.neuroimage.2016.11.005.",
