@@ -23,10 +23,10 @@ RUN python -c 'import os, json; f = open("/tmp/gear_environ.json", "w"); json.du
 
 RUN conda update conda
 RUN conda create -n py37 python=3.7
-RUN /bin/bash -c "source activate py37"
 
 COPY requirements.txt /tmp
-RUN pip install -r /tmp/requirements.txt && \
+RUN /bin/bash -c ". activate py37 && \
+    pip install -r /tmp/requirements.txt && \
     rm -rf /root/.cache/pip
 
 # Copy executable/manifest to Gear
