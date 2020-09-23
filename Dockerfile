@@ -27,7 +27,7 @@ RUN conda create -n py37 python=3.7
 COPY requirements.txt /tmp
 RUN /bin/bash -c ". activate py37 && \
     pip install -r /tmp/requirements.txt && \
-    rm -rf /root/.cache/pip
+    rm -rf /root/.cache/pip"
 
 # Copy executable/manifest to Gear
 COPY manifest.json ${FLYWHEEL}/manifest.json
