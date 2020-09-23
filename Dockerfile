@@ -21,6 +21,7 @@ WORKDIR ${FLYWHEEL}
 ENV PYTHONUNBUFFERED 1
 RUN python -c 'import os, json; f = open("/tmp/gear_environ.json", "w"); json.dump(dict(os.environ), f)'
 
+RUN conda update conda
 RUN conda install python=3.7
 
 COPY requirements.txt /tmp
