@@ -19,9 +19,10 @@ WORKDIR ${FLYWHEEL}
 
 # Save docker environ
 ENV PYTHONUNBUFFERED 1
+ENV LC_CTYPE=en_US.UTF-8
 RUN python -c 'import os, json; f = open("/tmp/gear_environ.json", "w"); json.dump(dict(os.environ), f)'
 
-RUN conda install python=3.7
+RUN conda install python=3.6
 
 COPY requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt && \
