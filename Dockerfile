@@ -38,3 +38,4 @@ COPY run.py ${FLYWHEEL}/run.py
 # Configure entrypoint
 RUN chmod a+x ${FLYWHEEL}/run.py
 ENTRYPOINT ["/flywheel/v0/run.py"]
+ENTRYPOINT ["conda", "run", "-n", "py37", "python", "/flywheel/v0/run.py"]
