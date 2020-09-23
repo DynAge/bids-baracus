@@ -22,7 +22,8 @@ ENV PYTHONUNBUFFERED 1
 RUN python -c 'import os, json; f = open("/tmp/gear_environ.json", "w"); json.dump(dict(os.environ), f)'
 
 RUN conda update conda
-#RUN conda install python=3.7
+RUN conda create -n py37 python=3.7
+RUN source activate py37
 
 COPY requirements.txt /tmp
 RUN pip install -r /tmp/requirements.txt && \
