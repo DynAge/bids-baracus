@@ -103,31 +103,6 @@
       "description": "Write workflow graph",
       "type": "boolean"
     },
-    "example-empty-param": {
-      "default": "",
-      "description": "This will be passed in as an empty string when the gear is run using the SDK even if it is not provided as a config when calling gear.run().",
-      "type": "string"
-    },
-    "example-bool-param": {
-      "default": false,
-      "description": "some yes or no choice",
-      "type": "boolean"
-    },
-    "example-num-things": {
-      "description": "number of things that is important to set",
-      "optional": true,
-      "type": "integer"
-    },
-    "example-name-or-something": {
-      "description": "path to JSON file with settings",
-      "optional": true,
-      "type": "string"
-    },
-    "example-threshold": {
-      "default": 3.1415926,
-      "description": "threshold eating pie",
-      "type": "number"
-    },
     "gear-ignore-bids-errors": {
       "default": false,
       "description": "By default, the gear will not run if there are any BIDS errors detected.  Set this to run even if BIDS errors are detected",
@@ -183,7 +158,7 @@
   "environment": {
     "PYTHONUNBUFFERED": "1"
   },
-  "command": "python run.py",
+  "command": "/usr/local/anaconda/bin/python run.py",
   "author": "Franz Liem",
   "maintainer": "franziskus.liem@uzh.ch",
   "cite": "Liem et al. (2017). Predicting brain-age from multimodal imaging data captures cognitive impairment. Neuroimage, 148:179–188, doi: 10.1016/j.neuroimage.2016.11.005.",

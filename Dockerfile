@@ -11,14 +11,7 @@ RUN apt-get update && \
     gcc && \
     rm -rf /var/lib/apt/lists/*
 # The last line above is to help keep the docker image smaller
-
 RUN npm install -g bids-validator@1.5.4
-
-RUN conda install python=3.6
-
-COPY requirements.txt /tmp
-RUN pip install -r /tmp/requirements.txt && \
-    rm -rf /root/.cache/pip
 
 # Make directory for flywheel spec (v0)
 ENV FLYWHEEL /flywheel/v0
@@ -27,6 +20,12 @@ WORKDIR ${FLYWHEEL}
 # Save docker environ
 ENV PYTHONUNBUFFERED 1
 RUN python -c 'import os, json; f = open("/tmp/gear_environ.json", "w"); json.dump(dict(os.environ), f)'
+
+RUN conda install python=3.6
+
+COPY requirements.txt /tmp
+RUN pip install -r /tmp/requirements.txt && \
+    rm -rf /root/.cache/pip
 
 # Copy executable/manifest to Gear
 COPY manifest.json ${FLYWHEEL}/manifest.json
