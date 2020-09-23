@@ -137,7 +137,7 @@
   "environment": {
     "PYTHONUNBUFFERED": "1"
   },
-  "command": ". activate py37 && python run.py",
+  "command": "/usr/local/anaconda/envs/py37/bin/python run.py",
   "author": "Franz Liem",
   "maintainer": "franziskus.liem@uzh.ch",
   "cite": "Liem et al. (2017). Predicting brain-age from multimodal imaging data captures cognitive impairment. Neuroimage, 148:179–188, doi: 10.1016/j.neuroimage.2016.11.005.",
