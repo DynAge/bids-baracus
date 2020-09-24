@@ -61,17 +61,6 @@
       "optional": true,
       "type": "string"
     },
-    "verbose": {
-      "default": "v",
-      "description": "increases log verbosity for each occurrence, debug level is -vvv",
-      "enum": [
-        "",
-        "v",
-        "vv",
-        "vvv"
-      ],
-      "type": "string"
-    },
     "n_cpus": {
       "description": "Number of CPUs/cores use",
       "optional": true,
