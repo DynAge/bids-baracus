@@ -297,7 +297,7 @@ if __name__ == "__main__":
     gtk_context = flywheel_gear_toolkit.GearToolkitContext()
 
     # Setup basic logging and log the configuration for this job
-    if gtk_context["gear-log-level"] == "INFO":
+    if gtk_context.config["gear-log-level"] == "INFO":
         gtk_context.init_logging("info")
     else:
         gtk_context.init_logging("debug")
