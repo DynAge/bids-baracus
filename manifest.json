@@ -2,12 +2,12 @@
   "name": "bids-baracus",
   "label": "BARACUS: Brain-Age Regression Analysis and Computation Utility Software",
   "description": "BARACUS: Brain-Age Regression Analysis and Computation Utility Software.",
-  "version": "dev0.0.11_v1.1.4",
+  "version": "dev0.0.12_v1.1.4",
   "custom": {
-    "docker-image": "dynage/bids-baracus:dev0.0.11_v1.1.4",
+    "docker-image": "dynage/bids-baracus:dev0.0.12_v1.1.4",
     "gear-builder": {
       "category": "analysis",
-      "image": "dynage/bids-baracus:dev0.0.11_v1.1.4"
+      "image": "dynage/bids-baracus:dev0.0.12_v1.1.4"
     },
     "flywheel": {
       "suite": "BIDS Apps"
